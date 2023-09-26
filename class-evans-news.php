@@ -33,7 +33,7 @@ class Evans_News {
 	 * @return string          The (possibly) filtered content.
 	 */
 	public function time_traveler( $content ) {
-		if ( is_home() || is_singular() ) {
+		if ( is_home() || is_single() ) {
 			global $post;
 			$age = time() - strtotime( $post->post_date_gmt );
 			if ( $age > 4 * MONTH_IN_SECONDS ) {
